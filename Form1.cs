@@ -15,6 +15,7 @@ namespace FluentMigrator
     {
         public Form1()
         {
+
             InitializeComponent();
             StoretypeBox.Items.Add("Trees");
             StoretypeBox.Items.Add("Pools");
@@ -150,7 +151,6 @@ namespace FluentMigrator
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }
