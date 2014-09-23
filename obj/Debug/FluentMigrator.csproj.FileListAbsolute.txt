@@ -1,0 +1,9 @@
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\bin\Debug\FluentMigrator.exe.config
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\bin\Debug\FluentMigrator.exe
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\bin\Debug\FluentMigrator.pdb
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.csprojResolveAssemblyReference.cache
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.Properties.Resources.resources
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.csproj.GenerateResource.Cache
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.exe
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.pdb
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.Form1.resources
