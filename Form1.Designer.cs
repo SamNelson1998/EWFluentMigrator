@@ -48,6 +48,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rollback = new System.Windows.Forms.RadioButton();
             this.migrate = new System.Windows.Forms.RadioButton();
+            this.Browse = new System.Windows.Forms.Button();
+            this.FilePath = new System.Windows.Forms.Label();
+            this.FilePathText = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             // 
             // ServerBox
             // 
-            this.ServerBox.Location = new System.Drawing.Point(9, 25);
+            this.ServerBox.Location = new System.Drawing.Point(9, 75);
             this.ServerBox.Name = "ServerBox";
             this.ServerBox.Size = new System.Drawing.Size(160, 20);
             this.ServerBox.TabIndex = 1;
@@ -73,7 +76,7 @@
             // 
             this.Server.AutoSize = true;
             this.Server.BackColor = System.Drawing.Color.Transparent;
-            this.Server.Location = new System.Drawing.Point(9, 9);
+            this.Server.Location = new System.Drawing.Point(6, 59);
             this.Server.Name = "Server";
             this.Server.Size = new System.Drawing.Size(41, 13);
             this.Server.TabIndex = 2;
@@ -84,7 +87,7 @@
             // 
             this.Database.AutoSize = true;
             this.Database.BackColor = System.Drawing.Color.Transparent;
-            this.Database.Location = new System.Drawing.Point(9, 58);
+            this.Database.Location = new System.Drawing.Point(6, 108);
             this.Database.Name = "Database";
             this.Database.Size = new System.Drawing.Size(56, 13);
             this.Database.TabIndex = 3;
@@ -93,7 +96,7 @@
             // 
             // DatabaseBox
             // 
-            this.DatabaseBox.Location = new System.Drawing.Point(9, 74);
+            this.DatabaseBox.Location = new System.Drawing.Point(9, 124);
             this.DatabaseBox.Name = "DatabaseBox";
             this.DatabaseBox.Size = new System.Drawing.Size(160, 20);
             this.DatabaseBox.TabIndex = 4;
@@ -133,7 +136,7 @@
             // 
             this.EnvironmentBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EnvironmentBox.FormattingEnabled = true;
-            this.EnvironmentBox.Location = new System.Drawing.Point(194, 74);
+            this.EnvironmentBox.Location = new System.Drawing.Point(194, 75);
             this.EnvironmentBox.Name = "EnvironmentBox";
             this.EnvironmentBox.Size = new System.Drawing.Size(157, 21);
             this.EnvironmentBox.TabIndex = 9;
@@ -173,11 +176,11 @@
             this.Validate.BackColor = System.Drawing.Color.Transparent;
             this.Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Validate.ForeColor = System.Drawing.Color.Red;
-            this.Validate.Location = new System.Drawing.Point(15, 126);
+            this.Validate.Location = new System.Drawing.Point(9, 147);
             this.Validate.Name = "Validate";
-            this.Validate.Size = new System.Drawing.Size(141, 13);
+            this.Validate.Size = new System.Drawing.Size(182, 13);
             this.Validate.TabIndex = 13;
-            this.Validate.Text = "*Please fill in all parameters.*";
+            this.Validate.Text = "Please Fill in All Parameters Correctly.";
             this.Validate.Visible = false;
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
@@ -195,10 +198,10 @@
             // 
             this.OutputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.OutputBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.OutputBox.Location = new System.Drawing.Point(9, 178);
+            this.OutputBox.Location = new System.Drawing.Point(9, 176);
             this.OutputBox.Name = "OutputBox";
             this.OutputBox.ReadOnly = true;
-            this.OutputBox.Size = new System.Drawing.Size(441, 178);
+            this.OutputBox.Size = new System.Drawing.Size(441, 180);
             this.OutputBox.TabIndex = 15;
             this.OutputBox.TabStop = false;
             this.OutputBox.Text = "";
@@ -208,7 +211,7 @@
             // 
             this.OutputLabel.AutoSize = true;
             this.OutputLabel.BackColor = System.Drawing.Color.Transparent;
-            this.OutputLabel.Location = new System.Drawing.Point(12, 162);
+            this.OutputLabel.Location = new System.Drawing.Point(9, 160);
             this.OutputLabel.Name = "OutputLabel";
             this.OutputLabel.Size = new System.Drawing.Size(42, 13);
             this.OutputLabel.TabIndex = 16;
@@ -250,6 +253,36 @@
             this.migrate.UseVisualStyleBackColor = true;
             this.migrate.CheckedChanged += new System.EventHandler(this.migrate_CheckedChanged);
             // 
+            // Browse
+            // 
+            this.Browse.Location = new System.Drawing.Point(145, 23);
+            this.Browse.Name = "Browse";
+            this.Browse.Size = new System.Drawing.Size(24, 24);
+            this.Browse.TabIndex = 18;
+            this.Browse.Text = "...";
+            this.Browse.UseVisualStyleBackColor = true;
+            this.Browse.Click += new System.EventHandler(this.Browse_Click);
+            // 
+            // FilePath
+            // 
+            this.FilePath.AutoSize = true;
+            this.FilePath.BackColor = System.Drawing.Color.Transparent;
+            this.FilePath.Location = new System.Drawing.Point(6, 9);
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Size = new System.Drawing.Size(51, 13);
+            this.FilePath.TabIndex = 20;
+            this.FilePath.Text = "File Path:";
+            // 
+            // FilePathText
+            // 
+            this.FilePathText.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.FilePathText.Location = new System.Drawing.Point(9, 25);
+            this.FilePathText.Name = "FilePathText";
+            this.FilePathText.Size = new System.Drawing.Size(137, 20);
+            this.FilePathText.TabIndex = 21;
+            this.FilePathText.Text = "C:\\Code\\warehouse-manager-web\\packages\\FluentMigrator.1.3.0.0\\tools\\Migrate.exe";
+            this.FilePathText.TextChanged += new System.EventHandler(this.FileBoxText_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +290,9 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundImage = global::FluentMigrator.Properties.Resources.Background3;
             this.ClientSize = new System.Drawing.Size(462, 367);
+            this.Controls.Add(this.FilePathText);
+            this.Controls.Add(this.FilePath);
+            this.Controls.Add(this.Browse);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.OutputLabel);
             this.Controls.Add(this.OutputBox);
@@ -309,6 +345,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rollback;
         private System.Windows.Forms.RadioButton migrate;
+        private System.Windows.Forms.Button Browse;
+        private System.Windows.Forms.Label FilePath;
+        private System.Windows.Forms.TextBox FilePathText;
     }
 }
 

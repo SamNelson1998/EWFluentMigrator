@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace FluentMigrator
 {
@@ -15,7 +16,6 @@ namespace FluentMigrator
     {
         public Form1()
         {
-
             InitializeComponent();
             StoretypeBox.Items.Add("Trees");
             StoretypeBox.Items.Add("Pools");
@@ -31,18 +31,19 @@ namespace FluentMigrator
 
         private void Run_Click(object sender, EventArgs e)
         {
-            if (ServerBox.Text == String.Empty
+            if(Directory.Exists(FilePathText.Text) == true
+                ||ServerBox.Text == String.Empty
                 || DatabaseBox.Text == String.Empty
                 || StoretypeBox.Text == String.Empty
                 || EnvironmentBox.Text == String.Empty
                 || DatabasetypeBox.Text == String.Empty
                 || (rollback.Checked == false && migrate.Checked == false))
             {
-                Validate.Visible = true;
+                OutputBox.Text = "Please Fill in All Parameters Correctly.";
             }
             else
             {
-                Validate.Visible = false;
+                OutputBox.Text = "Processing...";
                 string store = StoretypeBox.SelectedItem.ToString();
                 string environment = EnvironmentBox.SelectedItem.ToString();
                 string datatype = DatabasetypeBox.SelectedItem.ToString();
@@ -60,15 +61,23 @@ namespace FluentMigrator
                 StartInfo.RedirectStandardOutput = true;
                 StartInfo.RedirectStandardError = true;
                 StartInfo.UseShellExecute = false;
-                StartInfo.FileName = "C:\\Code\\warehouse-manager-web\\packages\\FluentMigrator.1.3.0.0\\tools\\Migrate.exe";
+                StartInfo.FileName = FilePathText.Text.Replace(@"\", @"\\");
                 StartInfo.Arguments = " /connection " + "\"Data Source=" + ServerBox.Text +
                                       ";Initial Catalog=" + DatabaseBox.Text +
                                       ";User ID=wmuser;Password='b@ls@m-h1ll;';\"" +
                                       " /db sqlserver /target C:\\Code\\warehouse-manager-web\\Migrations\\bin\\Debug\\Migrations.dll /task " + cast
-                                      +" /context Development /tag " + store + " /tag " + environment + " /tag " + datatype;
+                                      + " /context Development /tag " + store + " /tag " + environment + " /tag " + datatype;
                 migraterun.StartInfo = StartInfo;
-                migraterun.Start();
 
+                //////Get validation of Directory Path to Work
+                if (Directory.Exists(StartInfo.FileName) == false)
+                {
+                    OutputBox.Text = "File Path is Invalid.";
+                }
+                else
+                {
+                    migraterun.Start();
+                }
                 string output = "";
 
                 while (!migraterun.HasExited)
@@ -151,6 +160,28 @@ namespace FluentMigrator
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
         }
+
+        private void Browse_Click(object sender, EventArgs e)
+        {
+            String input = String.Empty;
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Executive File (*.exe)|*.exe|All files (*.*)|*.*";
+            dialog.InitialDirectory = "C:";
+            dialog.Title = "Locate file: Migrator.exe";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+                FilePathText.Text = dialog.FileName;
+            if (strFileName == String.Empty)
+                return; ;
+        }
+
+        private void FileBoxText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public string strFileName { get; set; }
     }
 }
