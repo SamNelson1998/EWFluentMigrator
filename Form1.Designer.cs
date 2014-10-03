@@ -41,7 +41,6 @@
             this.Databasetype = new System.Windows.Forms.Label();
             this.DatabasetypeBox = new System.Windows.Forms.ComboBox();
             this.Validation = new System.Windows.Forms.Label();
-            this.Validate = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
             this.OutputBox = new System.Windows.Forms.RichTextBox();
             this.OutputLabel = new System.Windows.Forms.Label();
@@ -170,20 +169,6 @@
             this.Validation.Size = new System.Drawing.Size(0, 13);
             this.Validation.TabIndex = 12;
             // 
-            // Validate
-            // 
-            this.Validate.AutoSize = true;
-            this.Validate.BackColor = System.Drawing.Color.Transparent;
-            this.Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Validate.ForeColor = System.Drawing.Color.Red;
-            this.Validate.Location = new System.Drawing.Point(9, 147);
-            this.Validate.Name = "Validate";
-            this.Validate.Size = new System.Drawing.Size(182, 13);
-            this.Validate.TabIndex = 13;
-            this.Validate.Text = "Please Fill in All Parameters Correctly.";
-            this.Validate.Visible = false;
-            this.Validate.Click += new System.EventHandler(this.Validate_Click);
-            // 
             // Close
             // 
             this.Close.Location = new System.Drawing.Point(375, 116);
@@ -288,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.BackgroundImage = global::FluentMigrator.Properties.Resources.Background3;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(462, 367);
             this.Controls.Add(this.FilePathText);
             this.Controls.Add(this.FilePath);
@@ -297,7 +282,6 @@
             this.Controls.Add(this.OutputLabel);
             this.Controls.Add(this.OutputBox);
             this.Controls.Add(this.Close);
-            this.Controls.Add(this.Validate);
             this.Controls.Add(this.Validation);
             this.Controls.Add(this.DatabasetypeBox);
             this.Controls.Add(this.Databasetype);
@@ -338,7 +322,6 @@
         private System.Windows.Forms.Label Databasetype;
         private System.Windows.Forms.ComboBox DatabasetypeBox;
         private System.Windows.Forms.Label Validation;
-        private System.Windows.Forms.Label Validate;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.RichTextBox OutputBox;
         private System.Windows.Forms.Label OutputLabel;

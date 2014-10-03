@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FluentMigrator.exe" size="366080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FluentMigrator.exe" size="432128">
       <assemblyIdentity name="FluentMigrator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iWWQrXn8S/2Ya6YVLykf6evPmIADJVBqnuJEYisWjpA=</dsig:DigestValue>
+        <dsig:DigestValue>gcNWe8+vMKw3RE/2VdwEHjImr3fBDxXfgAMqlvLn7IM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -14,6 +14,7 @@ namespace FluentMigrator
 {
     public partial class Form1 : Form
     {
+        private string output;
         public Form1()
         {
             InitializeComponent();
@@ -31,16 +32,16 @@ namespace FluentMigrator
 
         private void Run_Click(object sender, EventArgs e)
         {
-            if(Directory.Exists(FilePathText.Text) == true
-                ||ServerBox.Text == String.Empty
-                || DatabaseBox.Text == String.Empty
-                || StoretypeBox.Text == String.Empty
-                || EnvironmentBox.Text == String.Empty
-                || DatabasetypeBox.Text == String.Empty
-                || (rollback.Checked == false && migrate.Checked == false))
+            if(File.Exists(FilePathText.Text) == false
+               || DatabaseBox.Text == String.Empty
+               || StoretypeBox.Text == String.Empty
+               || EnvironmentBox.Text == String.Empty
+               || DatabasetypeBox.Text == String.Empty
+               || (rollback.Checked == false && migrate.Checked == false))
             {
-                OutputBox.Text = "Please Fill in All Parameters Correctly.";
+                OutputBox.Text = "Please Fill in all Parameters Correctly, and Make Sure the File Path is Valid.";
             }
+
             else
             {
                 OutputBox.Text = "Processing...";
@@ -61,24 +62,16 @@ namespace FluentMigrator
                 StartInfo.RedirectStandardOutput = true;
                 StartInfo.RedirectStandardError = true;
                 StartInfo.UseShellExecute = false;
-                StartInfo.FileName = FilePathText.Text.Replace(@"\", @"\\");
+                StartInfo.FileName = FilePathText.Text.Replace(@"\", "\\");
                 StartInfo.Arguments = " /connection " + "\"Data Source=" + ServerBox.Text +
                                       ";Initial Catalog=" + DatabaseBox.Text +
                                       ";User ID=wmuser;Password='b@ls@m-h1ll;';\"" +
                                       " /db sqlserver /target C:\\Code\\warehouse-manager-web\\Migrations\\bin\\Debug\\Migrations.dll /task " + cast
                                       + " /context Development /tag " + store + " /tag " + environment + " /tag " + datatype;
                 migraterun.StartInfo = StartInfo;
+                migraterun.Start();
 
-                //////Get validation of Directory Path to Work
-                if (Directory.Exists(StartInfo.FileName) == false)
-                {
-                    OutputBox.Text = "File Path is Invalid.";
-                }
-                else
-                {
-                    migraterun.Start();
-                }
-                string output = "";
+                output = "";
 
                 while (!migraterun.HasExited)
                 {
@@ -124,11 +117,6 @@ namespace FluentMigrator
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Validate_Click(object sender, EventArgs e)
         {
 
         }
