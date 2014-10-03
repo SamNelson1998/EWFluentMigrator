@@ -39,7 +39,20 @@ namespace FluentMigrator
                || DatabasetypeBox.Text == String.Empty
                || (rollback.Checked == false && migrate.Checked == false))
             {
-                OutputBox.Text = "Please Fill in all Parameters Correctly, and Make Sure the File Path is Valid.";
+                OutputBox.Text = "";
+
+                if (File.Exists(FilePathText.Text) == false)
+                {
+                    OutputBox.Text += "Make Sure the File Path is Valid. ";
+                }
+                if (DatabaseBox.Text == String.Empty
+                   || StoretypeBox.Text == String.Empty
+                   || EnvironmentBox.Text == String.Empty
+                   || DatabasetypeBox.Text == String.Empty
+                   || (rollback.Checked == false && migrate.Checked == false))
+                {
+                    OutputBox.Text += "Please Fill in All Parameters Correctly. ";
+                }
             }
 
             else
