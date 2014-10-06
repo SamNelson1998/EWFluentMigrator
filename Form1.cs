@@ -170,6 +170,7 @@ namespace FluentMigrator
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Executive File (*.exe)|*.exe|All files (*.*)|*.*";
             dialog.InitialDirectory = "C:";
+            dialog.RestoreDirectory = true;
             dialog.Title = "Locate file: Migrator.exe";
 
             if (dialog.ShowDialog() == DialogResult.OK)
