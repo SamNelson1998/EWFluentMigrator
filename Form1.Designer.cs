@@ -265,7 +265,7 @@
             this.FilePathText.Name = "FilePathText";
             this.FilePathText.Size = new System.Drawing.Size(137, 20);
             this.FilePathText.TabIndex = 21;
-            this.FilePathText.Text = "C:\\Code\\warehouse-manager-web\\packages\\FluentMigrator.1.3.0.0\\tools\\Migrate.exe";
+            this.FilePathText.Text = "C:\\";
             this.FilePathText.TextChanged += new System.EventHandler(this.FileBoxText_TextChanged);
             // 
             // Form1

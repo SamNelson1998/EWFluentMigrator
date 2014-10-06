@@ -11,3 +11,16 @@ C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\bin\Debug\FluentMigrator.application
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.exe.manifest
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\HelloWorld\FluentMigrator\FluentMigrator\obj\Debug\FluentMigrator.application
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\bin\Debug\FluentMigrator.exe.config
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.exe
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.pdb
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\bin\Debug\FluentMigrator.exe.manifest
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\bin\Debug\FluentMigrator.application
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\bin\Debug\FluentMigrator.exe
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\bin\Debug\FluentMigrator.pdb
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.csprojResolveAssemblyReference.cache
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.Form1.resources
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.Properties.Resources.resources
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.csproj.GenerateResource.Cache
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.exe.manifest
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\EWFluentMigrator\obj\Debug\FluentMigrator.application
