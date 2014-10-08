@@ -265,7 +265,7 @@
             this.FilePathText.Name = "FilePathText";
             this.FilePathText.Size = new System.Drawing.Size(137, 20);
             this.FilePathText.TabIndex = 21;
-            this.FilePathText.Text = "C:\\";
+            this.FilePathText.Text = "...";
             this.FilePathText.TextChanged += new System.EventHandler(this.FileBoxText_TextChanged);
             // 
             // Form1
